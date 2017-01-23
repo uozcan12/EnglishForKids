@@ -6,7 +6,9 @@ import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+
 import java.awt.BorderLayout;
+
 import javax.swing.JButton;
 
 import java.awt.Component;
@@ -18,13 +20,19 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.ComponentEvent;
 import java.awt.Color;
+
 import javax.swing.JLabel;
+
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.Locale;
 
 
 public class EnglishForKids {
 
+	Locale trlocale= Locale.forLanguageTag("tr-TR");
+	Locale enLocale = Locale.forLanguageTag("en_US");
+	
 	JFrame frame;
 	
 	private ImageIcon image1 ;
@@ -39,7 +47,7 @@ public class EnglishForKids {
 	/**
 	 * Create the application.
 	 */
-	public EnglishForKids() { // býraktýgýn yerde acma kodu: parametre girdik:JFrame parent
+	public EnglishForKids() { // bÄ±raktÄ±ÄŸÄ±n yerde acma kodu: parametre girdik:JFrame parent
 		
 		initialize();
 	}
@@ -52,17 +60,11 @@ public class EnglishForKids {
 	private void initialize() {
 		frame = new JFrame("English For Kids");
 		
-		frame.setBounds(50, 25, 500, 400); // býraktýgýn yerde acma kodu x ve y parametresi girildi
+		frame.setBounds(50, 25, 500, 400); // bÄ±raktÄ±ÄŸÄ±n yerde acma kodu x ve y parametresi girildi
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		
 		ImageIcon img = new ImageIcon("img/icon.jpg");
 		frame.setIconImage(img.getImage());
-	
-		
-//		BackgroundPanel bp= new BackgroundPanel(null);
-//		bp.add(panel);
-//		frame.add(bp);
-//		
 		
 		JPanel panel = new JPanel();
 		panel.setBackground(Color.PINK);
@@ -70,11 +72,6 @@ public class EnglishForKids {
 		panel.setLayout(null);
 		panel.getSize();
 		
-		
-	
-		
-//		image1 = new ImageIcon("C://Users/Uður/workspace/Kaynakça-Hazýrlama.jpg");
-//		panel.add(image1) ;
 			
 		final JButton btnGames = new JButton("GAMES");
 		btnGames.addActionListener(new ActionListener() {
@@ -212,8 +209,8 @@ public class EnglishForKids {
 		panel.add(btnDictionary);
 		
 		JLabel arkaplan = new JLabel("");
-		arkaplan.setIcon(new ImageIcon("img/Kaynakça-Hazýrlama.jpg"));
-		arkaplan.setBounds(0, 0, 484, 362);
+		arkaplan.setIcon(new ImageIcon("img/KaynakÃ§a-HazÄ±rlama.jpg"));
+		arkaplan.setBounds(0, 0, 500, 400);
 		arkaplan.getSize();
 		panel.add(arkaplan);
 		
@@ -244,12 +241,7 @@ public class EnglishForKids {
 		btnHelp.setFont(new Font("Tahoma", Font.BOLD, 18));
 		btnHelp.setBounds(44, 250, 160, 46);
 		arkaplan.add(btnHelp);
-		
-		
-		
-		
-		
-		
+
 	}
 
 	public void setVisible(boolean b) {
@@ -257,5 +249,3 @@ public class EnglishForKids {
 		
 	}
 }
-
-
