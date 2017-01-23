@@ -4,28 +4,41 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+
 import java.awt.BorderLayout;
+
 import javax.swing.JButton;
+
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
+
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.GridLayout;
+
 import javax.swing.JScrollPane;
+
 import java.awt.GridBagLayout;
 import java.awt.GridBagConstraints;
+
 import javax.swing.SwingConstants;
+
 import java.awt.Insets;
+
 import javax.swing.JTextField;
+
 import java.awt.Font;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.util.Locale;
 
 public class Intro{
 	
-	
+	Locale trlocale= Locale.forLanguageTag("tr-TR");
+	Locale enLocale = Locale.forLanguageTag("en_US");
 
 	private JFrame frame;
 
@@ -97,7 +110,7 @@ public class Intro{
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
 				frame.setVisible(false);
-				EnglishForKids eng = new EnglishForKids(); // b�rakt�g�n yerde acma kodu:frame yazd�k
+				EnglishForKids eng = new EnglishForKids(); // bıraktıgın yerde acma kodu:frame yazdık
 				eng.setVisible(true);
 			}
 		});
@@ -114,7 +127,7 @@ public class Intro{
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
 				frame.setVisible(false);
-				About about =new About(); // b�rakt�g�n yerde acma kodu:frame yazd�k
+				About about =new About(); // bıraktığın yerde açma kodu:frame yazdık
 				about.setVisible(true);
 				
 			}
